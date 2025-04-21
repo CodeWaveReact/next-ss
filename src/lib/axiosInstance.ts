@@ -1,6 +1,7 @@
 "use server";
 
 import axios from "axios";
+import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
 const baseURL = "https://api.escuelajs.co/api/v1";
@@ -44,7 +45,7 @@ axiosInstance.interceptors.response.use(
 
       // Redirect to login page
       if (typeof window !== "undefined") {
-        window.location.href = "/login";
+        redirect("/login");
       }
     }
     return Promise.reject(error);

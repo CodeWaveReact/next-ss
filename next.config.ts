@@ -12,6 +12,26 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "placehold.co",
       },
+      {
+        protocol: "https",
+        hostname: "m.media-amazon.com/images",
+      },
+      {
+        protocol: "https",
+        hostname: "api.escuelajs.co",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.pixabay.com",
+      },
+      {
+        protocol: "https",
+        hostname: "redux-toolkit.js.org",
+      },
+      {
+        protocol: "https",
+        hostname: "emprendedores.es",
+      },
     ],
   },
   redirects: async () => {

@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Product = ({ products }: { products: ProductProps[] }) => {
+  console.log('products', products)
   return (
     <div className="flex flex-wrap">
      {products?.map((product: ProductProps) => (
