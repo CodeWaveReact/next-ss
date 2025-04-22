@@ -9,8 +9,11 @@ import toast from 'react-hot-toast';
 import { FormInput } from '@/components/FormInput';
 import { FormData, loginValidationSchema } from '@/lib/validations';
 import { login } from '@/lib/serverActions';
+import { useForceReload } from '@/hooks/useForceReload';
 
 export default function LoginPage() {
+  // Check if the user is already logged in or not
+  useForceReload();
   const router = useRouter();
   const [state, formAction, isPending] = useActionState(login, null);
   const { register, handleSubmit, formState: { errors } } = useForm<FormData>({

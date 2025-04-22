@@ -53,5 +53,9 @@ export async function getProducts() {
     return response.data;
   } catch (error) {
     console.log("error", error);
+    if (error instanceof Error) {
+      throw new Error(error.message); // This is what triggers error.tsx
+    }
+    throw new Error("An unknown error occurred"); // Fallback for non-Error objects
   }
 }
