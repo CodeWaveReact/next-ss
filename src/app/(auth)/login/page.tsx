@@ -4,6 +4,8 @@ import { redirect } from 'next/navigation';
 
 import LoginPage from '@/components/auth/login';
 
+export const dynamic = 'force-dynamic';
+
 const page = async () => {
   const token = (await cookies()).get("token");
 
